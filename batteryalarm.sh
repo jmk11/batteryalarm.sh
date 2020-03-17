@@ -30,12 +30,12 @@ do
 			if gnome-screensaver-command -q | grep "is active"
 			then
 				while [[ $(upower -i $(upower -e | grep 'BAT') | grep -E "state") == "    state:               discharging" ]]
-	         	do
-		            spd-say -w "Battery low. Plug in the computer."
-	                sleep 1
-	            done
-	            sleep 1
-	            spd-say "Thank you."
+				do
+					spd-say -w "Battery low. Plug in the computer."
+					sleep 1
+				done
+				sleep 1
+				spd-say "Thank you."
 			fi
 		fi
 	fi
